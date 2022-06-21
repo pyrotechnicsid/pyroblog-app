@@ -1,0 +1,195 @@
+
+.App-Title {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  opacity: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Menu-Bar {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  height: max-content;
+  background-color: #282c34;
+}
+
+
+.Home-Button {
+  margin: 10px;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Home-Button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.Home-Button:active {
+  transform: scale(0.95);
+}
+
+.Create-Button {
+  margin: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #03d3a9;
+  background-image: linear-gradient(45deg, #009893 0%, #0eaa00  51%, #3ef3c6  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.Create-Button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.Create-Button:active {
+  transform: scale(0.95);
+}
+
+:root {
+  background-image: url("https://i.imgur.com/S4wLjbH.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.Entry-Container {
+  display: flex;
+  height: max-content;
+  background-color: #ffffff;
+  opacity: 90%;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+.Post-Form {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.Form-Container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.Post-TextContent {
+  display: flex;
+  height: 300px;
+}
+
+.Post-Submit {
+  display: flex;
+  margin-top: 10px;
+    background: rgba(0, 190, 139, 0.543);
+    border: 1px solid rgba(0, 190, 139, 0.543);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.Post-Submit:hover,
+.Post-Submit:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: rgba(0, 190, 139, 0.543);
+}
+
+.Post-Submit:active {
+    opacity: .5;
+}
+
+.Post-Element {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background-color:#20d7fbbd;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.Website-Tagline {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  opacity: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .View-Button {
+
+    font: 13px Arial;
+    text-decoration: none;
+    background-color: #efefef;
+    color: #000000;
+    padding: 1px 6px;
+    border-top: 2px solid #CCCCCC;
+    border-right: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    border-left: 2px solid #CCCCCC;
+  } */
