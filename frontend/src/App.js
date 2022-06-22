@@ -7,6 +7,7 @@ import Menubar from './components/MenuBar'
 import CreatePost from './components/CreatePost';
 import UserEntries from './components/UserEntries';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import EditPost from './components/EditPost';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class App extends React.Component {
     this.state = {
       BlogEntriesData: [],
       viewPostData: [],
-      viewUserEntries: []
+      viewUserEntries: [],
+      editPostEntries: {}
     }
 
   }
@@ -51,6 +53,12 @@ class App extends React.Component {
         }
         }
 
+        const addEditPosts = (data) => {
+          this.setState({
+            editPostEntries: data
+          })
+        }
+
       return (
         <Router>
           <AppTitle />
@@ -58,7 +66,7 @@ class App extends React.Component {
           <Routes>
             <Route exact path="/" element={
               <>
-                <BlogEntries BlogEntriesData={this.state.BlogEntriesData} addViewPost={addViewPost} addUserEntries={addUserEntries} />
+                <BlogEntries BlogEntriesData={this.state.BlogEntriesData} addViewPost={addViewPost} addUserEntries={addUserEntries} addEditPosts={addEditPosts} />
               </>
             }>
             </Route>
@@ -79,6 +87,13 @@ class App extends React.Component {
             <Route exact path="/userentries" element={
               <>
                 <UserEntries viewUserEntries={this.state.viewUserEntries}/>
+              </>
+            }>
+
+            </Route>
+            <Route exact path="/editpost" element={
+              <>
+                <EditPost editPostEntries={this.state.editPostEntries}/>
               </>
             }>
 

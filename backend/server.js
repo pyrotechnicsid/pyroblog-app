@@ -34,8 +34,7 @@ const pool = new Pool({
 
 //post new blog entry
 app.post ("/api/create", async (req, res) => {
-    let entry_title = req.body.entry_title;
-//   let entry_date = req.body.entry_date.toISOString();
+let entry_title = req.body.entry_title;
   let entry_user = req.body.entry_user;
   let entry_text = req.body.entry_text;
     try {
@@ -50,6 +49,21 @@ app.post ("/api/create", async (req, res) => {
     }
     
 })
+
+//Patch or Edit a post entry
+app.patch("/api/edit/:id", async (req, res) => {
+    var newObj = req.body;
+    console.log(newObj)
+    try {
+      let client = await pool.connect();
+      await client.query(`UPDATE entries SET entry_title='${newObj.entry_title}', entry_date=to_timestamp(${Date.now()}/1000.0), entry_user='${newObj.entry_user}', entry_text='${newObj.entry_text}', WHERE entry_id = ${newObj.entry_id};`);
+      res.json('Updated!');
+      client.release();
+    }
+    catch (err) {
+      console.log("ERROR!")
+    }
+    })
 //Delete a post entry
 app.delete("/api/posts/:id", async (req, res) => {
     var id=req.params.id;

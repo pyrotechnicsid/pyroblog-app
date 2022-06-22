@@ -12,7 +12,7 @@ render () {
                 {this.props.viewUserEntries.map((elem) => {
                     return (
                     <div className="Post-Element">
-                    <h3 key="{elem.entry_id}">{elem.entry_title}</h3>
+                    <center><h3 key="{elem.entry_id}">{elem.entry_title}</h3></center>
                     <p><b>Author: </b>{elem.entry_user}</p>
                     <p><b>Date: </b>{elem.entry_date}</p>
                     <p>{elem.entry_text}</p>
