@@ -50,7 +50,7 @@ let entry_title = req.body.entry_title;
     
 })
 
-//Patch or Edit a post entry testing
+//Patch or Edit a post entry
 app.patch("/api/edit/:id", async (req, res) => {
     var newObj = req.body;
     console.log(newObj)
